@@ -1,0 +1,70 @@
+
+
+
+<!DOCTYPE html> 
+
+<html>
+
+    <head>
+    
+        <title>Assignment 3: If Statement</title>
+        
+    </head>
+    
+    <body>
+    
+        <section id="page1">
+        
+            <section id="answer"></section>
+            
+        </section>
+            
+     <script>
+
+        var grade = ""
+              
+        //get user input
+        do {
+		var range = parseInt(prompt("To find what letter grade you have earned enter the number from 0 through 100. When finished, or to escape, enter 999"));
+		
+        //different output based on conditions
+		if(range < 60)
+		{
+			grade = " F";
+            alert("Number grade = " + range + "\nLetter grade =" + grade);
+		}
+		else if(range >=60 && range <68)
+		{
+			grade = " D";
+            alert("Number grade = " + range + "\nLetter grade =" + grade);
+		}
+		else if(range >=68 && range < 80)
+		{
+			grade = " C";
+            alert("Number grade = " + range + "\nLetter grade =" + grade);
+		}
+        else if(range >=80 && range < 88)
+		{
+			grade = " B";
+            alert("Number grade = " + range + "\nLetter grade =" + grade);
+        }
+        else if(range >=88 && range <= 100)
+		{
+			grade = " A";
+            alert("Number grade = " + range + "\nLetter grade =" + grade);
+        }
+        else if(range >100 && range != 999)
+		{
+			alert("1-100, please!");
+        }
+        }
+		while(range != 999);
+		
+        document.write("Here is your letter grade:")
+        
+     
+     </script>
+        
+    </body>
+
+</html>
