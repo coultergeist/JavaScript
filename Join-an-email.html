@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        
+        <style>
+        
+            article, aside, figure, footer, header, nav, section {
+            display: block;
+            }
+
+            body {
+
+                background-color: white;
+                margin: 0 auto;
+                width: 650px;
+                border: 3px solid gray;
+            }
+
+            section {
+                padding: 0 2em 1em;
+            }
+
+            label {
+                float: left;
+                width: 11em;
+                text-align: right;
+            }
+
+            input {
+                margin-left: 1em;
+                margin-bottom: .5em;
+            }
+
+            span {
+                color: red;
+            }
+
+        </style>
+        
+        <title>A4: Joining an Email List</title>
+        
+   	    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+   	    <script>
+        
+        //the $ here is simply a variable name for convenience. It’s not a reference to jquery
+
+var $ = function (id) { return document.getElementById(id); }
+
+var joinList = function () {
+    
+    //get the value of the email address fields
+	var emailAddress1 = $("email_address1").value;
+	var emailAddress2 = $("email_address2").value;
+	
+	// validate the entries
+    var firstName = $("first_name").value;
+    var lastName = $("last_name").value;
+    var errorMsg1 = $("email_address1_error").firstChild.nodeValue;
+    var errorMsg2 = $("email_address2_error").firstChild.nodeValue;
+    var errorMsg3 = $("first_name_error").firstChild.nodeValue;
+    var errorMsg4 = $("last_name_error").firstChild.nodeValue
+    var isValid1, isValid2, isValid3, isValid4 = false;
+     
+    //error #1: email box is empty
+    if(emailAddress1 == "") {
+        errorMsg1 = "This is a required field";
+        $("email_address1_error").firstChild.nodeValue =  errorMsg1;
+        isValid1 = false;
+    }
+    
+        else {
+            errorMsg1 = "";
+            $("email_address1_error").firstChild.nodeValue = errorMsg1;
+            isValid1 = true;
+        }
+    
+    //error #2: email box 2 is empty
+    if(emailAddress2 == "") {
+        errorMsg2 = "This is a required field";
+        $("email_address2_error").firstChild.nodeValue =  errorMsg2;
+        isValid2 = false;
+    }
+    
+        else if (emailAddress1 != emailAddress2) {            
+            errorMsg2 = "Your email addresses must match";
+            $("email_address2_error").firstChild.nodeValue = errorMsg2;
+            isValid2 = false;
+        }
+        
+    //email addresses do not match
+        else {
+            errorMsg2 = "";
+            $("email_address2_error").firstChild.nodeValue = errorMsg2;
+            isValid2 = true;
+        }
+            
+    //error #3: Enter a first name
+    if(firstName == "") {
+        errorMsg3 = "You must enter your First Name";
+        $("first_name_error").firstChild.nodeValue =  errorMsg3;
+        isValid3 = false;
+        }
+    
+        else {
+            errorMsg3 = "";
+            $("first_name_error").firstChild.nodeValue = errorMsg3;
+            isValid3 = true;
+        }
+    
+        //error #4: Enter a last name
+        if(lastName == "") {
+        errorMsg4 = "You must enter your Last Name"
+        $("last_name_error").firstChild.nodeValue =  errorMsg4;
+        isValid4 = false;
+        }
+    
+        else {
+            errorMsg4 = "";
+            $("last_name_error").firstChild.nodeValue = errorMsg4;
+            isValid4 = true;
+        }    
+    
+    // submit the form if all entries are valid
+    if (isValid1 && isValid2 && isValid3 && isValid4) {
+		$("email_form").submit();
+       }
+    }
+
+    window.onload = function () {
+        $("join_list").onclick = joinList;
+        $("email_address1").focus(); 
+    }
+            
+        </script>
+    </head>
+
+    <body>
+        <section>
+            <h1>Welcome! You can join our email list below. </h1>
+            <form id="email_form" >
+                <label for="email_address1">Email Address:</label>
+                <input type="text" id="email_address1" name="email_address1">
+                <span id="email_address1_error">*</span><br>
+
+                <label for="email_address2">Re-enter Email Address:</label>
+                <input type="text" id="email_address2" name="email_address2">
+                <span id="email_address2_error">*</span><br>
+
+                <label for="first_name">First Name</label>
+                <input type="text" id="first_name" name="first_name">
+                <span id="first_name_error">*</span><br>
+
+
+                <label for="_name">Last Name</label>
+                <input type="text" id="last_name" name="last_name">
+                <span id="last_name_error">*</span><br>
+
+                <label>&nbsp;</label>
+                <input type="button" id="join_list" value="Join our List"><br>
+            </form>
+            
+        </section>
+        
+    </body>
+    
+</html>
+
+
