@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        <title>Assignment 1: Invoice Calculator</title>
+    </head>
+    
+    <body>
+        
+        <h3>Invoice Calculator:</h3>
+        <h3 id="message">Here is your bill: </h3>
+        
+        <script>
+        
+            //Declare the variable
+            var taxPercentage = 0.1; //10%
+
+            //Prompt the user to enter the tip amount
+            var amount = parseFloat(prompt("Please enter the invoice amount"));
+
+            //Calculations
+            var taxAmount = amount * taxPercentage;
+            var total = taxAmount + amount;
+
+            //Create and declare a message variable
+            var message = "Thank You! Your total at 10% tax rate is: ";
+
+            message += "<br>Total: $" + total.toFixed(2);
+
+            //Get node with id of message and display message
+          var el = document.getElementById('message');
+el.innerHTML = message;
+
+        </script>
+        
+    </body>
+
+</html>
