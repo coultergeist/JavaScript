@@ -1,1 +1,144 @@
 
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>A5: Bill Calculator</title>
+        
+        <link rel="stylesheet" href="css/a5.css">
+   	    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+   	    <script src="js/a5.js"></script>
+        
+    </head>
+
+    <body>
+        <section>
+            <h1>Bill Calculator</h1>
+           
+            <form>
+                
+                <label for="bill_subtotal">Bill Subtotal:</label>
+                <input type="text" id="bill_subtotal" name="bill_subtotal">
+                <span id="bill_subtotal_error">Enter order subtotal</span><br>
+
+                <label for="tax_rate">Tax Rate:</label>
+                <input type="text" id="tax_rate" name="tax_rate">
+                <span id="tax_rate_error">Enter sales tax rate (ie: 9.5)</span><br>
+
+                <label for="sales_tax">Sales Tax:</label>
+                <input type="text" id="sales_tax" name="sales_tax" disabled="disabled"><br>
+
+                <label for="total">Total:</label>
+                <input type="text" id="total" name="total" disabled="disabled"><br>
+
+                <label>&nbsp;</label>
+                <input type="button" id="calculator" value="Calculate"><br>
+                
+                <label>&nbsp;</label>
+                <input type="reset" id="clear" value="Clear"><br>
+                
+            </form>
+            
+        </section>
+        
+    </body>
+    
+</html>
+
+
+// --------------------- Javascript Below--------------------
+
+//the $ here is simply a variable name for convenience. It’s not a reference to jquery
+
+var $ = function (id) { return document.getElementById(id); }
+
+var calculator = function () {
+	
+	// get the value of the fields
+    var billSubtotal = parseFloat($("bill_subtotal").value);
+    var taxRate = parseFloat($("tax_rate").value);
+    
+    //validate the entires
+    var errorMsg1 = $("bill_subtotal_error").firstChild.nodeValue;
+    var errorMsg2 = $("tax_rate_error").firstChild.nodeValue;
+    var isValid1, isValid2 = false;
+     
+    //error #1: subtotal box 
+    if (!(billSubtotal <= 1000 && billSubtotal > 0 )) {
+        errorMsg1 = "Please enter a positive number less than 1000";
+        $("bill_subtotal_error").firstChild.nodeValue = errorMsg1;
+        isValid1 = false;
+    }
+    
+        else {
+            errorMsg1 = "";
+            $("bill_subtotal_error").firstChild.nodeValue = errorMsg1;
+            isValid1 = true;
+        }
+    
+    //error #2: sales tax rate box
+    if (!(taxRate <= 25 && billSubtotal > 0)) {
+        errorMsg2 = "Please enter a positive number less than 25";
+        $("tax_rate_error").firstChild.nodeValue =  errorMsg2;
+        isValid2 = false;
+    }
+    
+        else {
+            errorMsg2 = "";
+            $("tax_rate_error").firstChild.nodeValue = errorMsg2;
+            isValid2 = true;
+        }    
+    
+    //calculations
+    var total = taxRate * billSubtotal + billSubtotal;
+    
+    
+    //submit the form if all entries are valid
+    if (isValid1 && isValid2) {
+            $("sales_tax").value = taxRate / 100 * billSubtotal;
+            $("total").value = total;
+       }
+    }
+
+    window.onload = function () {
+        $("calculator").onclick = calculator;
+        $("bill_subtotal").focus(); 
+    }
+    
+    --------------------- CSS Below ------------------------
+    
+    article, aside, figure, footer, header, nav, section {
+    display: block;
+}
+
+body {
+   
+    background-color: white;
+    margin: 0 auto;
+    width: 650px;
+    border: 3px solid gray;
+    font-family: arial;
+
+}
+
+section {
+    padding: 0 2em 1em;
+}
+
+label {
+	float: left;
+    width: 11em;
+    text-align: right;
+}
+
+input {
+    margin-left: 1em;
+    margin-bottom: .5em;
+}
+
+span {
+	color: blue;
+}
+
