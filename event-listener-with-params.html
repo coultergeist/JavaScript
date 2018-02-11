@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>A5: Bill Calculator</title>
+        
+        <link rel="stylesheet" href="css/c06.css">
+        
+    </head>
+
+    <body>
+        
+        <div id="page">
+            
+            <form>
+                
+                <label for="username">Create A Username:</label>
+                <input type="text" id="username"/>
+                <div id="feedback"></div>
+                
+                <label for="password">Create a Password:</label>
+                <imput type="password" id="password"/>
+                
+                <input type="submit" value="sign up">
+                
+            </form>
+        </div>
+        
+        <script>
+            var elUsername = document.getElementById('username');
+            var elMsg - document.getElementById('feedback');
+            
+            //function declaration
+            function checkUsername(minLength)
+                if(elUsername.value.length < minLength){
+                   elMsg.innerHTML = "Username must be" + minLength + "chars or more"; 
+                } else  
+                    elMsg.innerHTML = "";
+                }
+                
+            }
+                
+                elUsername.addEventListener('blur', function(){
+                    checkUsername(5);}, false);                }
+                
+         </script>
+
+    </body>
+    
+</html>
+
+
