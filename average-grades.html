@@ -1,0 +1,43 @@
+<!Doctype html>
+<html>
+<head>
+    <title>Average of Grades Class Exercise</title>
+</head>
+
+<body>
+	<script>
+		var entry = parseInt(score);
+        var i = 1;
+        
+        //do ..while loop executes at least once even if
+        //condition is not true
+		
+        //calculate the total scores
+        var total = entry + i++;
+        
+        //calculate the average score
+        var average = total / i
+        
+        //perform loop
+		do {
+			entry = prompt("Enter test scores. Or enter 999 to get the average").toUpperCase();
+            
+            if (entry == "") {
+                	document.write("Please enter the test scores to calculate an average. Or enter 999 to end entries.");
+            }
+            
+            else if (entry > "100") {
+                	document.write("Please enter test scores between 0-100 to calculate an average. Or enter 999 to end entries.");
+            }
+		}
+        
+        //end loop
+		while(entry != "999");
+        
+        //give the solution as a message
+        var el = document.getElementById('average'); el.innerHTML = msg;
+		
+	
+	</script>
+</body>
+</html>
