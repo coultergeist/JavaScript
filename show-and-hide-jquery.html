@@ -1,0 +1,48 @@
+<!DOCTYPE html> 
+
+<html>
+
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js">      
+        </script>
+        
+        <script>        
+            $(document).ready(function(){
+                //select the element with id of #button1
+                //and on a click even on this elemnet
+                //execute the showAndHide Function
+               $("#button1").click(showAndHide);
+            });
+            
+            //declare the showAndHide funciton
+            function showAndHide(){
+             //check if the list is visable   
+            if($("#mylist li").is(":visible")){
+            
+                $("#mylist li").hide();
+                $("#button1").html("show");
+            } else {
+                $("#mylist li").show();
+                $("#button1").html("hide");
+            }
+            }
+</script>
+        
+        
+    </head>
+
+        
+    <body>
+
+        <button id="button1">Click Me</button>
+        <h2>My List</h2>
+        
+        <ul>
+            <li>Kale</li>
+            <li>Rice</li>
+            <li>Cat Food</li>
+            <li>Bread</li>
+        </ul>
+    </body>
+    
+</html>
