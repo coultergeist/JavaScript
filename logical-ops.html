@@ -1,0 +1,49 @@
+<!DOCTYPE html> 
+
+<html>
+
+    <head>
+    
+        <title>Logical Operations</title>
+        
+    </head>
+    
+    <body>
+    
+        <section id="page1">
+        
+            <section id="answer"></section>
+            
+        </section>
+    
+        
+        <script>
+           
+            var score1 = 5;
+            var score2 = 5;
+            var pass1 = 6;
+            var pass2 = 6;
+            
+            //check if the user passed one of the rounds
+            var minPass = (score1 >= pass1) && (score2 >= pass2);
+            
+            if (minPass){
+                document.write("congrats" );
+            } else {
+                document.write("try again! ");
+            }
+            
+            //create a message
+           // var msg = 'Restest required: ' + !minPass;
+            
+            //write message
+            var el = document.getElementById('answer');
+            el.innerHTML = msg;
+            
+        </script>
+    
+    </body>
+
+
+
+</html>
