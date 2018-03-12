@@ -40,18 +40,20 @@
        * the items and their prices
        */
         $priceList = array();
-        $priceList["tsoup"] =2.50;
-        $priceList["bandb"] =1.00;
-       $priceList["csalad"] =3.50;
-       $priceList["gfishnp"] =8.50;
-       $priceList["ipizza"] =5.50;
-       $priceList["vegpasta"] =4.00;
-       $priceList["chickennpotato"] =6.50;
-       $priceList["dburger"] =5.00;
-       $priceList["fsalad"] =2.50;
-       $priceList["icecream"] =2.00;
-       $priceList["ccake"] =4.00;   
-       $priceList["cheese"] =5.50;  
+        $priceList["grand"] =6.50;
+        $priceList["animal"] =7.50;
+       $priceList["veggie"] =8.00;
+       $priceList["mayo"] =0.50;
+       $priceList["cheese"] =0.75;
+		$priceList["chili"] =1.25;
+       $priceList["jala"] =0.35;
+       $priceList["meat"] =2.50;
+       $priceList["fries"] =1.75;
+       $priceList["shake"] =3.75;
+       $priceList["drink"] =1.99;
+       $priceList["lemon"] =2.50;
+      
+ 
        return $priceList;
    }
 ?>
