@@ -42,30 +42,33 @@ body, html {height: 100%}
    <div class="w3-container w3-black w3-display-container">
    <span onclick="document.getElementById('menu').style.display='none'" class="w3-button w3-display-topright w3-large">x</span>
    <h1>Burger Types</h1>
+       <h4><i>Angus beef on sourdough bread with handmade french fries and 12 oz. fountain drink</i></h4>
    </div>
    <div class="w3-container">
-   <p><h5><input type="checkbox" name="order[]" value="tsoup">Tomato Soup <b>$2.50</b></h5></p>
-   <h5><input type="checkbox" name="order[]" value="csalad">Chicken Salad <b>$3.50</b></h5>
-   <h5><input type="checkbox" name="order[]" value="bandb">Bread and Butter <b>$1.00</b></h5>
+   <h5><input type="checkbox" name="order[]" value="grand">Grand Slam <i>Mayo, cheddar, lettuce, tomato, pickle, mayo </i><b>$6.50</b></h5>
+   <h5><input type="checkbox" name="order[]" value="veggie">Veggie Delight <i>Black bean burger with vegan Gourmet Cheddar, lettuce, tomato, pickle </i> <b>$8.00</b></h5>
+   <h5><input type="checkbox" name="order[]" value="animal">Animal Style <i>Secret Sauce, relish, cheddar, lettuce, tomato, pickle </i><b>$7.50</b></h5>
    </div>
    <div class="w3-container w3-black">
-   <h1>Main Courses</h1>
+   <h1>Burger Dressings</h1>
    </div>
    <div class="w3-container">
-   <h5><input type="checkbox" name="order[]" value="gfishnp">Grilled Fish and Potatoes <b>$8.50</b></h5>
-   <h5><input type="checkbox" name="order[]" value="ipizza">Italian Pizza <b>$5.50</b></h5>
-   <h5><input type="checkbox" name="order[]" value="vegpasta">Veggie Pasta <b>$4.00</b></h5>
-   <h5><input type="checkbox" name="order[]" value="chickennpotato">Chicken and Potatoes <b>$6.50</b></h5>
-   <h5><input type="checkbox" name="order[]" value="dburger">Deluxe Burger <b>$5.00</b></h5>
+   <h5><input type="checkbox" name="order[]" value="mayo">Mayo <b>$.50</b></h5>
+   <h5><input type="checkbox" name="order[]" value="jala">Jalapenos <b>$.35</b></h5>
+   <h5><input type="checkbox" name="order[]" value="cheese">Cheddar Chese <b>$.75</b></h5>
+   <h5><input type="checkbox" name="order[]" value="chili">Chili <b>$1.25</b></h5>
+    <h5><input type="checkbox" name="order[]" value="meat">Extra Patty <b>$2.50</b></h5>
+
+
    </div>
    <div class="w3-container w3-black">
-   <h1>Desserts</h1>
+   <h1>Sides</h1>
    </div>
    <div class="w3-container">
-   <h5><input type="checkbox" name="order[]" value="fsalad">Fruit Salad <b>$2.50</b></h5>
-   <h5><input type="checkbox" name="order[]" value="icecream">Ice cream <b>$2.00</b></h5>
-   <h5><input type="checkbox" name="order[]" value="ccake">Chocolate Cake <b>$4.00</b></h5>
-   <h5><input type="checkbox" name="order[]" value="cheese">Cheese <b>$5.50</b></h5>
+   <h5><input type="checkbox" name="order[]" value="fries">Animal Style Fries <i>Secret Sauce, grilled onions, melted cheddar </i> <b>$1.75</b></h5>
+   <h5><input type="checkbox" name="order[]" value="shake">Shake <i>16 oz. Chocolate, Vanilla, Banana, Strawberry </i> <b>$3.75</b></h5>
+   <h5><input type="checkbox" name="order[]" value="drink">Fountain Drink <i>12 oz. Coke, Diet Coke, Grape Fanta, Iced Tea, Rootbeer </i><b>$1.99</b></h5>
+       <h5><input type="checkbox" name="order[]" value="lemon">Fresh Lemonade <i>16 oz. fresh squeezed lemonade </i><b>$2.50</b></h5>
    </div>
    </form>
    </div>
