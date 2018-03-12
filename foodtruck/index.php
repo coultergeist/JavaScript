@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>W3.CSS Template</title>
+<title>Testing</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -23,16 +23,9 @@ body, html {height: 100%}
   </div>
   <div class="w3-display-topleft w3-container w3-xlarge">
     <p><button onclick="document.getElementById('menu').style.display='block'" class="w3-button w3-black">menu</button></p>
-    <p><button onclick="document.getElementById('contact').style.display='block'" class="w3-button w3-black">contact</button></p>
+    <p><button onclick="document.getElementById('contact').style.display='block'" class="w3-button w3-black">team</button></p>
   </div>
-  <div class="w3-display-bottomleft w3-container">
-    <p class="w3-xlarge">ITC 320 Web App Dev, WI18</p>
-    <p class="w3-large">Final Project Teammates:</p>
-    <p>Adan, Layth</p>
-    <p>Coulter, Danielle</p>
-    <p>Hussein, Yahya</p>
-    <p>Neville, Erik</p>
-  </div>
+  
 </div>
 
 <!-- Menu Modal -->
@@ -70,8 +63,30 @@ body, html {height: 100%}
    <h5><input type="checkbox" name="order[]" value="drink">Fountain Drink <i>12 oz. Coke, Diet Coke, Grape Fanta, Iced Tea, Rootbeer </i><b>$1.99</b></h5>
        <h5><input type="checkbox" name="order[]" value="lemon">Fresh Lemonade <i>16 oz. fresh squeezed lemonade </i><b>$2.50</b></h5>
    </div>
+       </div>
    </form>
    </div>
+
+<!-- Team Modal -->
+<div id="contact" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom">
+    <div class="w3-container w3-black">
+      <span onclick="document.getElementById('contact').style.display='none'" class="w3-button w3-display-topright w3-large">x</span>
+      <h1>Teammates</h1>
+    </div>
+    <div class="w3-container">
+      <form action="/action_page.php" target="_blank">
+          <p class="w3-xlarge">Burger Bliss was created by these talented individuals:</p>
+          <p class="w3-large"><a href="http://ladan.icoolshow.net/"/>Adan, Layth</p>
+          <p class="w3-large"><a href="http://dcoulter.icoolshow.net/"/>Coulter, Danielle</p>
+          <p class="w3-large"><a href="http://yhussein.icoolshow.net/"/>Hussein, Yahya</p>
+          <p class="w3-large"><a href="http://eneville.icoolshow.net/"/>Neville, Erik</p>
+          
+
+      </form>
+    </div>
+  </div>
+</div>
 
 </body>
 </html>
