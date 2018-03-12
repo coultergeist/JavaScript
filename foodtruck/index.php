@@ -9,7 +9,7 @@
 body,h1,h5 {font-family: "Raleway", sans-serif}
 body, html {height: 100%}
 .bgimg {
-    background-image: url('/w3images/onepage_restaurant.jpg');
+    background-image: url(images/chef.jpg);
     min-height: 100%;
     background-position: center;
     background-size: cover;
@@ -19,16 +19,19 @@ body, html {height: 100%}
 
 <div class="bgimg w3-display-container w3-text-white">
   <div class="w3-display-middle w3-jumbo">
-    <p>logo</p>
+    <p>burger bliss</p>
   </div>
   <div class="w3-display-topleft w3-container w3-xlarge">
     <p><button onclick="document.getElementById('menu').style.display='block'" class="w3-button w3-black">menu</button></p>
     <p><button onclick="document.getElementById('contact').style.display='block'" class="w3-button w3-black">contact</button></p>
   </div>
   <div class="w3-display-bottomleft w3-container">
-    <p class="w3-xlarge">monday - friday 10-23 | saturday 14-02</p>
-    <p class="w3-large">42 village St, New York</p>
-    <p>powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+    <p class="w3-xlarge">ITC 320 Web App Dev, WI18</p>
+    <p class="w3-large">Final Project Teammates:</p>
+    <p>Adan, Layth</p>
+    <p>Coulter, Danielle</p>
+    <p>Hussein, Yahya</p>
+    <p>Neville, Erik</p>
   </div>
 </div>
 
@@ -37,10 +40,10 @@ body, html {height: 100%}
   <div class="w3-modal-content w3-animate-zoom">
     <div class="w3-container w3-black w3-display-container">
       <span onclick="document.getElementById('menu').style.display='none'" class="w3-button w3-display-topright w3-large">x</span>
-      <h1>Burger Types</h1>
+      <h1>Starters</h1>
     </div>
     <div class="w3-container">
-      <p><input type="checkbox" name="burgertype[]" value="beef"><h5>Tomato Soup <b>$2.50</b></h5></p>
+      <h5>Tomato Soup <b>$2.50</b></h5>
       <h5>Chicken Salad <b>$3.50</b></h5>
       <h5>Bread and Butter <b>$1.00</b></h5>
     </div>
