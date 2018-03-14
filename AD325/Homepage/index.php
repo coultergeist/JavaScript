@@ -32,6 +32,7 @@
             <div class="column">
             <h1 class='align-center'>AD 325 Web App Dev</h1>
             <h2 class='align-center'>Danielle Coulter Stage</h2>
+             <h4>North Seattle College, Winter 2018</h4>
            
             <br>
             <h4>Lab Work</h4>
